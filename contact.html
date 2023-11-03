@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZY Construction</title>
+    <link rel="stylesheet" href="logoicon/carlogo.jpg">
+    <link rel="stylesheet" href="zystyle.css">
+    <link rel="stylesheet" href="zyutilities.css">
+    <link rel="stylesheet" href="zycontact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2cab8a32a5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container grid">
+            <div class="logo">
+                <img src="logoicon/Rxlogosmall.jpg" style="width:120px">
+            </div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projectxy.html">Projects</a>
+            <a href="#serv">Services</a>
+            <a href="#" class="contact"></a>
+        </div>  
+    </header>
+    <main>
+
+        <!-- Main page -->
+        <!-- <div class="contact-background"> -->
+            <div class="background-container">
+                <h1 class="text-align">Contact Info</h1>
+                <div class="contact-info">
+                    <div class="contact-us">
+                        <h3 class="text-align">Keep in touch with us</h3>
+                        <div class="cont">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>No. 50 Emerald Street, Zone 5, Makati City, Philippines</p>
+                            </div>
+                        </div>    
+                        <div class="cont">
+                            <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                            <div class="contact-text">
+                                <h4>Contact No.</h4>
+                                <p><a href="tel:+639182266396">+639182266396</a></p>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <div class="contact-icon"><i class="fa-solid fa-at"></i></div>
+                            <div class="contact-text">
+                                <h4>E-mail</h4>
+                                <p><a href="mailto:zyconst@gmail.com">zyconstruct@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-message">
+                        <form method="post">
+                            <h3 class="text-align">Send Message</h3>
+                            <input type="text" id="name" placeholder="Enter name here" required>
+                            <input type="email" id="email", placeholder="E-mail" required>
+                            <textarea di="message" rows="4" placeholder="Enter message here"></textarea>
+
+                            <button id="submit">Send</button>
+                        </form>
+                        <script src="https://smtpjs.com/v3/smtp.js">
+                        </script>
+                        
+     
+                        <script>
+                            var convar = document.getElementById("submit")
+                            convar.addEventListener('click', function(e) {
+                                e.preventDefault()                         
+                                var name = document.getElementById('name').value;
+                                var email = document.getElementById('email').value;
+                                var message = document.getElementById('message').value;
+                                var body = 'name : '+ name + '<br/> email: ' + email + '<br/> message : ' + message ;
+                                                Email.send({
+                                        SecureToken : "280e74ba-8c13-4621-8a37-d145c62d705b",
+                                        To : 'marioxcalapine@gmail.com',
+                                        From : "enexta2020@gmail.com",
+                                        Subject : "Contact Message",
+                                        Body : body
+                                    }).then(
+                                    message => alert('Message Sent OK')
+                                    );
+                            })
+                        </script>
+                    </div>
+                    <!--
+                    <script src="https://smtpjs.com/v3/smtp.js">
+                    </script>
+                    
+ 
+                    <script>
+                        var convar = document.getElementById("submit")
+                        convar.addEventListener('click', function(e) {
+                            e.preventDefault()                         
+                            var name = document.getElementById('name').value;
+                            var email = document.getElementById('email').value;
+                            var message = document.getElementById('message').value;
+                            var body = 'name : '+ name + '<br/> email: ' + email + '<br/> message : ' + message ;
+                                            Email.send({
+                                    SecureToken : "280e74ba-8c13-4621-8a37-d145c62d705b",
+                                    To : 'marioxcalapine@gmail.com',
+                                    From : "enexta2020@gmail.com",
+                                    Subject : "Contact Message",
+                                    Body : body
+                                }).then(
+                                message => alert('Message Sent OK')
+                                );
+                        })
+                    </script>  -->
+                </div>
+                            
+            </div>
+        <!-- </div> -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-background">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="#" class="footer-title">
+                        <img src="logoicon/Rxlogosmall.jpg" alt="">
+                        <h2>Roxas Construction</h2>
+                    </a>     
+                    <p>Copyright &copy;</p>
+                </div>
+                <div class="footer-option">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="projectxy.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social text-align">
+                    <h2>L i n k s</h2>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

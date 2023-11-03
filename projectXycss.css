@@ -1,0 +1,250 @@
+:root {
+    --main-color: white;
+    --gap: 20px;
+    --col-num: 6;
+    --gray-10: #64748b;
+    --gray-15: #b3c5df;
+    --gray-20: #475569;
+    --gray-30: #1e293b;
+    --gray-40: #0f172a;
+    --box-shadow: 3px 5px 5px #475569;
+}
+
+.project-background {
+    width: 100%;
+    height: 50vh;
+    background-image: url(resto/hvac01.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+.project-backimage {
+    top: 50%;
+    transform: translateY(100%);
+    backdrop-filter: blur(5px);
+    padding-bottom: 20px;
+    
+}
+
+.top-title h1 {
+    color: var(--main-color);
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    padding: 20px;  
+}
+.project-status {
+    display: flex;
+    justify-content: center;
+}
+.project-status ul {
+    display: flex;
+}
+.project-status ul li {
+    display: flex;
+    width: 200px;
+    background-color: tomato;
+    line-height: 2;
+    justify-content: center;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    margin: 10px 0;
+}
+
+.project-status a {
+    color: white;
+    font-size: 20px;
+}
+.project-status ul li:hover {
+    background: green;
+}
+.project-status ul li a:hover {
+    color: blue;
+}
+.head-services {
+    background: white;
+    margin-right: 15px;
+    padding: 8px 0;
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.services-container .box-container .box .services h3 {
+    font-size: 20px;
+    color: green;
+}
+.services-container .box-container .box .services a {
+    font-size: 15px;
+}
+.services-container .box-container .box .services .btn:hover {
+    background: red;
+}
+
+.services-container .box-container .box .services .btn {
+    color: green;
+}
+/* Gallery */
+.project-background .project-backimage .gallery-text h1{
+    color: white;
+}
+.gallery-back {
+    width: 100%;
+    height: 20vh;
+    background-image: url(resto/hvac02.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-top: 100px;
+    
+}
+.gallery-backimage {
+    width: 50%;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+}
+/* Image Gallery */
+.gallery-container {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.gallery-container h1 {
+    font-size: 25px;
+    padding: 10px 0;
+    background: var(--gray-15);
+    margin-top: 20px;
+}
+
+.gallery-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px 250px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+.gallery-item .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.gallery-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+}
+/* Full background */
+#Fullview-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 10;
+}
+#FullImage {
+    padding: 20px;
+    /* width: 80%; */
+    height: 70%;
+}
+#CloseView {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+/* Grids */
+.w-1 {
+    grid-column: span 1;
+}
+.w-2 {
+    grid-column: span 2;
+}
+.w-3 {
+    grid-column: span 3;
+}
+.w-4 {
+    grid-column: span 4;
+}
+.w-5 {
+    grid-column: span 5;
+}
+.w-6 {
+    grid-column: span 6;
+}
+.h-1 {
+    grid-row: span 1;
+}
+.h-2 {
+    grid-row: span 2;
+}
+.h-3 {
+    grid-row: span 3;
+}
+.h-4 {
+    grid-row: span 4;
+}
+.h-5 {
+    grid-row: span 5;
+}
+.h-6 {
+    grid-row: span 6;
+}
+
+
+@media screen and (max-width: 500px) {
+    .project-background {
+        height: 40vh;
+    }
+    .top-title h1 {
+        font-size: 25px;
+    }
+    .project-backimage {
+        top: 30%;
+        transform: translateY(90%);   
+    }
+    .services-container h1 {
+        font-size: 22px;
+    }
+    .project-status ul li{
+        width: 130px;
+    }
+    .project-status a {
+        font-size: 18px;
+    }
+    .gallery-back {
+        height: 12vh;
+        padding-top: 50px;
+    }
+    .gallery-box {
+        grid-template-columns: 1fr;
+    }
+    .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
+        grid-column: span 1;
+    }
+}

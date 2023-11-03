@@ -1,0 +1,173 @@
+:root {
+    --background-color:  #eaefe3;
+    --main-color: white;
+    --gap: 20;
+    --gray-10: #c8d9f1;
+    --gray-20: #475569;
+    --gray-30: #1e293b;
+    --gray-40: #0f172a;
+}
+.about-container {
+    width: 90%;
+    height: 80vh;
+    /* background-color: var(--gray-10); */
+    background-position: center;
+    background-size: cover;
+    margin: 5px auto;
+    position: relative;
+    animation: slide 20s infinite;
+    overflow: hidden;
+}
+.image-load {
+    animation: slide 2s;
+}
+.about-back {
+    width: 90%;
+    height:60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.about-back .about-content img {
+    width: 30%;
+    height: 30%;
+    float: left;
+    padding: 20px 20px;
+    margin-top: 10px;
+}
+.side-image{
+    width: 400px;
+    margin-top: 20px;
+    /* height: 300px; */
+    /* padding-top: 150px; */
+}
+.side-image img {
+    width: 100%;
+    padding: 0 20px;
+    
+}
+
+.about-content {
+    width: 500px;
+    height: 400px;
+    /* background: var(--gray-20); */
+    margin-top: 20px;
+   
+}
+.about-container h1 {
+    padding: 15px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color: white;
+}
+.about-content p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    text-align: justify;
+    color: white;
+    padding: 20px 20px;
+}
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    
+}
+
+@keyframes slide {
+    0% {
+        background-image: url(const/const1.jpg);
+    }
+    25% {
+        background-image: url(const/const1.jpg);
+    }
+    25.01% {
+        background-image: url(const/const2.jpg);
+    }
+    50% {
+        background-image: url(const/const2.jpg);
+    }
+    50.01% {
+        background-image: url(const/const3.jpg);
+    }
+    75% {
+        background-image: url(const/const3.jpg);
+    }
+    75.01% {
+        background-image: url(people/pexels-const01unload.jpg);
+    }
+    100% {
+        background-image: url(people/pexels-const01unload.jpg);
+    }
+}
+@media screen and (max-width: 500px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .about-content {
+        width: 400px;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    .about-content p {
+        padding: 0 20px;
+    }
+    
+    .side-image {
+        margin-left: 20px;
+    }
+    .side-image img {
+        width: 80%;
+    }
+    .about-back {
+        padding-top: 20px;
+        margin-top: 20px;
+        height: 100vh;
+    }
+    .about-container {
+        height: 100vh;
+    }
+    .about-container h1 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .about-content {
+        width: 400px;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+    .about-content p {
+        padding: 0 20px;
+    }
+    
+    .side-image {
+        margin-left: 20px;
+    }
+    .side-image img {
+        width: 80%;
+    }
+    .about-back {
+        padding-top: 20px;
+        margin-top: 20px;
+        height: 80vh;
+    }
+    .about-container {
+        height: 110vh;
+    }
+    .about-container h1 {
+        font-size: 30px;
+    }
+}
