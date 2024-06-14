@@ -37,7 +37,7 @@
 }
 .about-back .about-content img {
     width: 30%;
-    height: 30%;
+    /*height: 30%;*/
     float: left;
     padding: 20px 20px;
     margin-top: 10px;
